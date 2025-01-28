@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Job Recruiter.master.cs" Inherits="JobPortalApplication.Job_Recruiter" %>
+<%@ Register Src="~/Header.ascx" TagName="myheader" TagPrefix="asp" %>
+<%@ Register Src="~/Footer.ascx" TagName="myfooter" TagPrefix="asp" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="file:///c:\users\hp\source\repos\jobportalapplication\jquery.js"></script>
+<link href="file:///c:\users\hp\source\repos\jobportalapplication\menu.css" rel="stylesheet" />
+<script src="file:///c:\users\hp\source\repos\jobportalapplication\menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+                     <table>
+              <tr>
+                  <td>
+                   <asp:myheader ID="h1" runat="server" ></asp:myheader>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <div id="menu">
+<ul class="menu">
+	<li><a href="../JobRecruiterModule/JobRecruiterHome.aspx"><span>Home</span></a></li>
+     <li><a href="../JobRecruiterModule/JobRecruiterjobpost.aspx"><span>New Job Post</span></a></li>
+     <li><a href="../JobRecruiterModule/JobRecruiterShowjobpost.aspx"><span>Show Job Post</span></a></li>
+    <li><a href="../JobRecruiterModule/JobRecruiterChangePassword.aspx"><span>Change Password</span></a></li>
+	<li class="last"><a href="../logout.aspx"><span>Log Out</span></a></li>
+</ul>
+	</div>
+
+                  </td>
+              </tr>
+              <tr>
+            <td style="height:350px; background-color:aqua; vertical-align:top">
+                <center>
+                  <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder> </center>
+            </td>
+              </tr>
+              <tr>
+             <td>
+                 <asp:myfooter ID="f1" runat="server" ></asp:myfooter>
+              </td>
+                 </tr>
+          </table>
+        </div>
+    </form>
+</body>
+</html>

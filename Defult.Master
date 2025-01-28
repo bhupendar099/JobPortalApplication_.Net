@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Defult.master.cs" Inherits="JobPortalApplication.Defult" %>
+<%@ Register Src="~/Header.ascx" TagName="myheader" TagPrefix="asp" %>
+<%@ Register Src="~/Footer.ascx" TagName="myfooter" TagPrefix="asp" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="file:///c:\users\hp\source\repos\jobportalapplication\jquery.js"></script>
+    <link href="file:///c:\users\hp\source\repos\jobportalapplication\menu.css" rel="stylesheet" />
+    <script src="file:///c:\users\hp\source\repos\jobportalapplication\menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                     <asp:myheader ID="h1" runat="server" ></asp:myheader>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:aqua">
+                        <div id="menu">
+		<ul class="menu">
+            <li><a href="JobSeeker_Registration.aspx"><span> Job Seeker Sign Up</span></a></li>
+			<li><a href="JobRecruiter_Registration.aspx"><span>Job Recriter Sign Up</span></a></li>
+			<li class="last"><a href="login.aspx"><span>Sign In</span></a></li>
+		</ul>
+	</div>
+
+                    </td>
+                </tr>
+                <tr>
+              <td style="height:360px; vertical-align:top; background-color:aquamarine">
+                  <center>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+  </asp:ContentPlaceHolder>
+                  </center>
+              </td>
+                </tr>
+                <tr>
+               <td>
+                   <asp:myfooter ID="f1" runat="server" ></asp:myfooter>
+                </td>
+                   </tr>
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
